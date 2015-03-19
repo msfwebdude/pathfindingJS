@@ -1,6 +1,8 @@
 # pathfindingJS
 <strong>JavaScript Pathfinding</strong>  
 
+try it out in browser <a href="https://dl.dropboxusercontent.com/u/4374311/github/pathfindingJS.html" target="_blank">here</a>  
+
 Click cell to assign cell type
 
 Black - Wall or Obstacle  
