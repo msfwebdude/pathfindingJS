@@ -1,6 +1,7 @@
 # pathfindingJS
-JavaScript Pathfinding
-Right click to assign cell type
+<strong>JavaScript Pathfinding</strong>  
+
+Click cell to assign cell type
 
 Black - Wall or Obstacle  
 Red - Destination  
