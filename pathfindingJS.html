@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pth</title>
+    <style type="text/css">
+        .cell 
+        {
+            width: 80px;
+            height: 80px;
+            margin-top: 3px;
+            text-align: center;
+            display: inline-block;
+            font-family: Sans-Serif;
+            font-size: 8pt;
+            color: #FEFEFF;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <p><br /></p>
+    <div id="arena" style="padding-left: 200px;">
+        <span id="cell_0,0" class="cell" onclick="toggleMe(this,0,0);" style="background-color: #CCCCCC;" data-x="0" data-y="0" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(0, 0)</span>
+        <span id="cell_0,1" class="cell" onclick="toggleMe(this,0,1);" style="background-color: #CCCCCC;" data-x="0" data-y="1" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(0, 1)</span>
+        <span id="cell_0,2" class="cell" onclick="toggleMe(this,0,2);" style="background-color: #CCCCCC;" data-x="0" data-y="2" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(0, 2)</span>
+        <span id="cell_0,3" class="cell" onclick="toggleMe(this,0,3);" style="background-color: #CCCCCC;" data-x="0" data-y="3" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(0, 3)</span>
+        <span id="cell_0,4" class="cell" onclick="toggleMe(this,0,4);" style="background-color: #CCCCCC;" data-x="0" data-y="4" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(0, 4)</span>
+        <span id="cell_0,5" class="cell" onclick="toggleMe(this,0,5);" style="background-color: #CCCCCC;" data-x="0" data-y="5" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(0, 5)</span>
+        <span id="cell_0,6" class="cell" onclick="toggleMe(this,0,6);" style="background-color: #CCCCCC;" data-x="0" data-y="6" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(0, 6)</span>
+        <span id="cell_0,7" class="cell" onclick="toggleMe(this,0,7);" style="background-color: #CCCCCC;" data-x="0" data-y="7" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(0, 7)</span><br />
+        <span id="cell_1,0" class="cell" onclick="toggleMe(this,1,0);" style="background-color: #CCCCCC;" data-x="1" data-y="0" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(1, 0)</span>
+        <span id="cell_1,1" class="cell" onclick="toggleMe(this,1,1);" style="background-color: #CCCCCC;" data-x="1" data-y="1" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(1, 1)</span>
+        <span id="cell_1,2" class="cell" onclick="toggleMe(this,1,2);" style="background-color: #CCCCCC;" data-x="1" data-y="2" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(1, 2)</span>
+        <span id="cell_1,3" class="cell" onclick="toggleMe(this,1,3);" style="background-color: #CCCCCC;" data-x="1" data-y="3" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(1, 3)</span>
+        <span id="cell_1,4" class="cell" onclick="toggleMe(this,1,4);" style="background-color: #CCCCCC;" data-x="1" data-y="4" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(1, 4)</span>
+        <span id="cell_1,5" class="cell" onclick="toggleMe(this,1,5);" style="background-color: #CCCCCC;" data-x="1" data-y="5" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(1, 5)</span>
+        <span id="cell_1,6" class="cell" onclick="toggleMe(this,1,6);" style="background-color: #CCCCCC;" data-x="1" data-y="6" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(1, 6)</span>
+        <span id="cell_1,7" class="cell" onclick="toggleMe(this,1,7);" style="background-color: #CCCCCC;" data-x="1" data-y="7" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(1, 7)</span><br />
+        <span id="cell_2,0" class="cell" onclick="toggleMe(this,2,0);" style="background-color: #CCCCCC;" data-x="2" data-y="0" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(2, 0)</span>
+        <span id="cell_2,1" class="cell" onclick="toggleMe(this,2,1);" style="background-color: #CCCCCC;" data-x="2" data-y="1" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(2, 1)</span>
+        <span id="cell_2,2" class="cell" onclick="toggleMe(this,2,2);" style="background-color: #CCCCCC;" data-x="2" data-y="2" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(2, 2)</span>
+        <span id="cell_2,3" class="cell" onclick="toggleMe(this,2,3);" style="background-color: #CCCCCC;" data-x="2" data-y="3" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(2, 3)</span>
+        <span id="cell_2,4" class="cell" onclick="toggleMe(this,2,4);" style="background-color: #CCCCCC;" data-x="2" data-y="4" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(2, 4)</span>
+        <span id="cell_2,5" class="cell" onclick="toggleMe(this,2,5);" style="background-color: #CCCCCC;" data-x="2" data-y="5" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(2, 5)</span>
+        <span id="cell_2,6" class="cell" onclick="toggleMe(this,2,6);" style="background-color: #CCCCCC;" data-x="2" data-y="6" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(2, 6)</span>
+        <span id="cell_2,7" class="cell" onclick="toggleMe(this,2,7);" style="background-color: #CCCCCC;" data-x="2" data-y="7" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(2, 7)</span><br />
+        <span id="cell_3,0" class="cell" onclick="toggleMe(this,3,0);" style="background-color: #CCCCCC;" data-x="3" data-y="0" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(3, 0)</span>
+        <span id="cell_3,1" class="cell" onclick="toggleMe(this,3,1);" style="background-color: #CCCCCC;" data-x="3" data-y="1" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(3, 1)</span>
+        <span id="cell_3,2" class="cell" onclick="toggleMe(this,3,2);" style="background-color: #CCCCCC;" data-x="3" data-y="2" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(3, 2)</span>
+        <span id="cell_3,3" class="cell" onclick="toggleMe(this,3,3);" style="background-color: #CCCCCC;" data-x="3" data-y="3" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(3, 3)</span>
+        <span id="cell_3,4" class="cell" onclick="toggleMe(this,3,4);" style="background-color: #CCCCCC;" data-x="3" data-y="4" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(3, 4)</span>
+        <span id="cell_3,5" class="cell" onclick="toggleMe(this,3,5);" style="background-color: #CCCCCC;" data-x="3" data-y="5" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(3, 5)</span>
+        <span id="cell_3,6" class="cell" onclick="toggleMe(this,3,6);" style="background-color: #CCCCCC;" data-x="3" data-y="6" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(3, 6)</span>
+        <span id="cell_3,7" class="cell" onclick="toggleMe(this,3,7);" style="background-color: #CCCCCC;" data-x="3" data-y="7" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(3, 7)</span><br />
+        <span id="cell_4,0" class="cell" onclick="toggleMe(this,4,0);" style="background-color: #CCCCCC;" data-x="4" data-y="0" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(4, 0)</span>
+        <span id="cell_4,1" class="cell" onclick="toggleMe(this,4,1);" style="background-color: #CCCCCC;" data-x="4" data-y="1" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(4, 1)</span>
+        <span id="cell_4,2" class="cell" onclick="toggleMe(this,4,2);" style="background-color: #CCCCCC;" data-x="4" data-y="2" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(4, 2)</span>
+        <span id="cell_4,3" class="cell" onclick="toggleMe(this,4,3);" style="background-color: #CCCCCC;" data-x="4" data-y="3" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(4, 3)</span>
+        <span id="cell_4,4" class="cell" onclick="toggleMe(this,4,4);" style="background-color: #CCCCCC;" data-x="4" data-y="4" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(4, 4)</span>
+        <span id="cell_4,5" class="cell" onclick="toggleMe(this,4,5);" style="background-color: #CCCCCC;" data-x="4" data-y="5" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(4, 5)</span>
+        <span id="cell_4,6" class="cell" onclick="toggleMe(this,4,6);" style="background-color: #CCCCCC;" data-x="4" data-y="6" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(4, 6)</span>
+        <span id="cell_4,7" class="cell" onclick="toggleMe(this,4,7);" style="background-color: #CCCCCC;" data-x="4" data-y="7" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(4, 7)</span><br />
+        <span id="cell_5,0" class="cell" onclick="toggleMe(this,5,0);" style="background-color: #CCCCCC;" data-x="5" data-y="0" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(5, 0)</span>
+        <span id="cell_5,1" class="cell" onclick="toggleMe(this,5,1);" style="background-color: #CCCCCC;" data-x="5" data-y="1" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(5, 1)</span>
+        <span id="cell_5,2" class="cell" onclick="toggleMe(this,5,2);" style="background-color: #CCCCCC;" data-x="5" data-y="2" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(5, 2)</span>
+        <span id="cell_5,3" class="cell" onclick="toggleMe(this,5,3);" style="background-color: #CCCCCC;" data-x="5" data-y="3" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(5, 3)</span>
+        <span id="cell_5,4" class="cell" onclick="toggleMe(this,5,4);" style="background-color: #CCCCCC;" data-x="5" data-y="4" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(5, 4)</span>
+        <span id="cell_5,5" class="cell" onclick="toggleMe(this,5,5);" style="background-color: #CCCCCC;" data-x="5" data-y="5" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(5, 5)</span>
+        <span id="cell_5,6" class="cell" onclick="toggleMe(this,5,6);" style="background-color: #CCCCCC;" data-x="5" data-y="6" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(5, 6)</span>
+        <span id="cell_5,7" class="cell" onclick="toggleMe(this,5,7);" style="background-color: #CCCCCC;" data-x="5" data-y="7" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(5, 7)</span><br />
+        <span id="cell_6,0" class="cell" onclick="toggleMe(this,6,0);" style="background-color: #CCCCCC;" data-x="6" data-y="0" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(6, 0)</span>
+        <span id="cell_6,1" class="cell" onclick="toggleMe(this,6,1);" style="background-color: #CCCCCC;" data-x="6" data-y="1" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(6, 1)</span>
+        <span id="cell_6,2" class="cell" onclick="toggleMe(this,6,2);" style="background-color: #CCCCCC;" data-x="6" data-y="2" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(6, 2)</span>
+        <span id="cell_6,3" class="cell" onclick="toggleMe(this,6,3);" style="background-color: #CCCCCC;" data-x="6" data-y="3" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(6, 3)</span>
+        <span id="cell_6,4" class="cell" onclick="toggleMe(this,6,4);" style="background-color: #CCCCCC;" data-x="6" data-y="4" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(6, 4)</span>
+        <span id="cell_6,5" class="cell" onclick="toggleMe(this,6,5);" style="background-color: #CCCCCC;" data-x="6" data-y="5" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(6, 5)</span>
+        <span id="cell_6,6" class="cell" onclick="toggleMe(this,6,6);" style="background-color: #CCCCCC;" data-x="6" data-y="6" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(6, 6)</span>
+        <span id="cell_6,7" class="cell" onclick="toggleMe(this,6,7);" style="background-color: #CCCCCC;" data-x="6" data-y="7" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(6, 7)</span><br />
+        <span id="cell_7,0" class="cell" onclick="toggleMe(this,7,0);" style="background-color: #CCCCCC;" data-x="7" data-y="0" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(7, 0)</span>
+        <span id="cell_7,1" class="cell" onclick="toggleMe(this,7,1);" style="background-color: #CCCCCC;" data-x="7" data-y="1" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(7, 1)</span>
+        <span id="cell_7,2" class="cell" onclick="toggleMe(this,7,2);" style="background-color: #CCCCCC;" data-x="7" data-y="2" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(7, 2)</span>
+        <span id="cell_7,3" class="cell" onclick="toggleMe(this,7,3);" style="background-color: #CCCCCC;" data-x="7" data-y="3" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(7, 3)</span>
+        <span id="cell_7,4" class="cell" onclick="toggleMe(this,7,4);" style="background-color: #CCCCCC;" data-x="7" data-y="4" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(7, 4)</span>
+        <span id="cell_7,5" class="cell" onclick="toggleMe(this,7,5);" style="background-color: #CCCCCC;" data-x="7" data-y="5" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(7, 5)</span>
+        <span id="cell_7,6" class="cell" onclick="toggleMe(this,7,6);" style="background-color: #CCCCCC;" data-x="7" data-y="6" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(7, 6)</span>
+        <span id="cell_7,7" class="cell" onclick="toggleMe(this,7,7);" style="background-color: #CCCCCC;" data-x="7" data-y="7" data-g="0" data-h="-1" data-f="-1" data-parent="-1">(7, 7)</span>
+    </div>
+    <p><br /></p>
+    <input id="btnRun" type="button" value="Run" onclick="run();" style="margin-left: 322px;" />
+    <p><br /></p>
+    <textarea id="txtDebug" rows="40" cols="100"></textarea>
+    <p><br /></p>
+    <script type="text/javascript">
+        
+        var COLOR_MODES_ARRAY = new Array("rgb(204, 204, 204)", "empty", "rgb(0, 255, 0)", "start", "rgb(255, 0, 0)", "target", "rgb(0, 0, 0)", "obstacle", "rgb(0, 0, 255)", "path");
+
+        var openList = new Array();             // array of element objects
+        var closedList = new Array();           // array of element ID strings
+
+
+
+        function run() {
+            //find start
+            var startElement = findElementForMode("start");
+
+            //find target
+            var targetElement = findElementForMode("target");
+
+            if (!startElement)  { alert("Please specify a start location (green cell)"); return; }
+            if (!targetElement) { alert("Please specify a target location (red cell)"); return; }
+
+
+            openList.push(startElement);
+            closedList.push(startElement.id);
+
+            while (openList.length > 0) {
+
+                var currentElement = openList.shift();
+                openList = openList.concat(findNeighors(currentElement));
+
+                var h = getH(currentElement, targetElement);
+                var g = parseFloat(currentElement.getAttribute("data-g"));
+                var f = g + h;
+                var p = currentElement.getAttribute("data-parent");
+
+
+                currentElement.setAttribute("data-h", "" + h + "");
+                currentElement.setAttribute("data-f", "" + f + "");
+                currentElement.innerHTML += "<br />f: " + f.toFixed(1) + "<br />g: " + g.toFixed(1) + "<br />h: " + h.toFixed(1) + "<br/>P: " + p + "";
+                
+
+                if (h == 0) { openList.length = 0; }
+            }
+
+            // find path backwards from target using lowest F and parent
+            var destinationElement = targetElement;
+            while (destinationElement.id != startElement.id) {
+                destinationElement = document.getElementById(destinationElement.getAttribute("data-parent"));
+                if (destinationElement.id != startElement.id) { setMode(destinationElement, "path"); }
+            }
+            
+        }
+
+        function toggleMe(sender, x, y) {
+            var mode = getMode(sender);
+            
+            if (mode == "empty") { setMode(sender, "obstacle"); }
+            if (mode == "obstacle") { clearModes("start"); setMode(sender, "start"); }
+            if (mode == "start") { clearModes("target"); setMode(sender, "target"); }
+            if (mode == "target") { setMode(sender, "empty"); }
+
+        }
+    </script>
+    <script type="text/javascript">
+        // HELPER FUNCTIONS
+
+        function clearModes(mode) {
+            var elements = document.getElementsByTagName("span");
+            for (var i = 0; i < elements.length; ++i) {
+                var element = elements[i];
+                if (getMode(element) == mode) {
+                    setMode(element, "empty");
+                }
+            }
+        }
+        function getMode(sender) {
+            return modeForColor(sender.style.backgroundColor);;
+        }
+        function setMode(sender, mode) {
+            sender.style.backgroundColor = colorForMode(mode);
+        }
+        
+        function findElementForMode(mode) {
+            var elements = document.getElementsByTagName("span");
+            for (var i = 0; i < elements.length; ++i) {
+                var element = elements[i];
+                if (getMode(element) == mode) {
+                    return element;
+                }
+            }
+            return;
+        }
+
+        function colorForMode(mode) {
+            var i = COLOR_MODES_ARRAY.indexOf(mode);
+            if (i > -1) {
+                return COLOR_MODES_ARRAY[i - 1];
+            }
+            else {
+                //error color Fuchsia
+                return "#FF00FF";
+            }
+        }
+        function modeForColor(color) {
+            var i = COLOR_MODES_ARRAY.indexOf(color);
+            if (i > -1) {
+                return COLOR_MODES_ARRAY[i + 1];
+            }
+            else {
+                //error mode
+                return "UNKNOWN";
+            }
+        }
+
+   
+
+        function findNeighors(sender) {
+            var rtvArray = new Array();
+
+            var my_x = parseInt(sender.getAttribute("data-x"));
+            var my_y = parseInt(sender.getAttribute("data-y"));
+
+            // cardinal direction nomenclature
+            // nw  nn  ne
+            // ww  *   ee
+            // sw  ss  se
+
+            var nn_x = my_x - 1;
+            var nn_y = my_y + 0;
+            var ne_x = my_x - 1;
+            var ne_y = my_y + 1;
+            var ee_x = my_x - 0;
+            var ee_y = my_y + 1;
+            var se_x = my_x + 1;
+            var se_y = my_y + 1;
+            var ss_x = my_x + 1;
+            var ss_y = my_y + 0;
+            var sw_x = my_x + 1;
+            var sw_y = my_y - 1;
+            var ww_x = my_x - 0;
+            var ww_y = my_y - 1;
+            var nw_x = my_x - 1;
+            var nw_y = my_y - 1;
+
+
+            // out of bounds coordinates will return null since JS cannot find that element
+            var nn = document.getElementById("cell_" + nn_x + "," + nn_y + "");
+            var ne = document.getElementById("cell_" + ne_x + "," + ne_y + "");
+            var ee = document.getElementById("cell_" + ee_x + "," + ee_y + "");
+            var se = document.getElementById("cell_" + se_x + "," + se_y + "");
+            var ss = document.getElementById("cell_" + ss_x + "," + ss_y + "");
+            var sw = document.getElementById("cell_" + sw_x + "," + sw_y + "");
+            var ww = document.getElementById("cell_" + ww_x + "," + ww_y + "");
+            var nw = document.getElementById("cell_" + nw_x + "," + nw_y + "");
+
+            var gStep = 10;
+            var gCurr = 0;
+            var gPrev = parseInt(sender.getAttribute("data-g"));
+
+
+            writeLog("Examining " + sender.id + " for valid neighbors");
+
+            // add valid non obstacle elements
+            if (nn != null) {
+                if (closedList.indexOf(nn.id) == -1) {
+                    if (getMode(nn) != "obstacle") {
+                        gStep = 10;
+                        gCurr = gStep + gPrev;
+                        nn.setAttribute("data-g", "" + gCurr + "");
+                        nn.setAttribute("data-parent", sender.id);
+                        writeLog("Adding north neighbor, " + nn.id + "");
+                        rtvArray.push(nn);
+                    }
+                    closedList.push(nn.id);
+                }
+            }
+            if (ne != null) {
+                if (closedList.indexOf(ne.id) == -1) {
+                    if (getMode(ne) != "obstacle") {
+                        gStep = 14;
+                        gCurr = gStep + gPrev;
+                        ne.setAttribute("data-g", "" + gCurr + "");
+                        ne.setAttribute("data-parent", sender.id);
+                        writeLog("Adding north east neighbor, " + ne.id + "");
+                        rtvArray.push(ne);
+                    }
+                    closedList.push(ne.id);
+                }
+            }
+            if (ee != null) {
+                if (closedList.indexOf(ee.id) == -1) {
+                    if (getMode(ee) != "obstacle") {
+                        gStep = 10;
+                        gCurr = gStep + gPrev;
+                        ee.setAttribute("data-g", "" + gCurr + "");
+                        ee.setAttribute("data-parent", sender.id);
+                        writeLog("Adding east neighbor, " + ee.id + "");
+                        rtvArray.push(ee);
+                    }
+                    closedList.push(ee.id);
+                }
+            }
+            if (se != null) {
+                if (closedList.indexOf(se.id) == -1) {
+                    if (getMode(se) != "obstacle") {
+                        gStep = 14;
+                        gCurr = gStep + gPrev;
+                        se.setAttribute("data-g", "" + gCurr + "");
+                        se.setAttribute("data-parent", sender.id);
+                        writeLog("Adding south east neighbor, " + se.id + "");
+                        rtvArray.push(se);
+                    }
+                    closedList.push(se.id);
+                }
+            }
+            if (ss != null) {
+                if (closedList.indexOf(ss.id) == -1) {
+                    if (getMode(ss) != "obstacle") {
+                        gStep = 10;
+                        gCurr = gStep + gPrev;
+                        ss.setAttribute("data-g", "" + gCurr + "");
+                        ss.setAttribute("data-parent", sender.id);
+                        writeLog("Adding south neighbor, " + ss.id + "");
+                        rtvArray.push(ss);
+                    }
+                    closedList.push(ss.id);
+                }
+            }
+            if (sw != null) {
+                if (closedList.indexOf(sw.id) == -1) {
+                    if (getMode(sw) != "obstacle") {
+                        gStep = 14;
+                        gCurr = gStep + gPrev;
+                        sw.setAttribute("data-g", "" + gCurr + "");
+                        sw.setAttribute("data-parent", sender.id);
+                        writeLog("Adding south west neighbor, " + sw.id + "");
+                        rtvArray.push(sw);
+                    }
+                    closedList.push(sw.id);
+                }
+            }
+            if (ww != null) {
+                if (closedList.indexOf(ww.id) == -1) {
+                    if (getMode(ww) != "obstacle") {
+                        gStep = 10;
+                        gCurr = gStep + gPrev;
+                        ww.setAttribute("data-g", "" + gCurr + "");
+                        ww.setAttribute("data-parent", sender.id);
+                        writeLog("Adding west neighbor, " + ww.id + "");
+                        rtvArray.push(ww);
+                    }
+                    closedList.push(ww.id);
+                }
+            }
+            if (nw != null) {
+                if (closedList.indexOf(nw.id) == -1) {
+                    if (getMode(nw) != "obstacle") {
+                        gStep = 14;
+                        gCurr = gStep + gPrev;
+                        nw.setAttribute("data-g", "" + gCurr + "");
+                        nw.setAttribute("data-parent", sender.id);
+                        writeLog("Adding north west neighbor, " + nw.id + "");
+                        rtvArray.push(nw);
+                    }
+                    closedList.push(nw.id);
+                }
+            }
+            
+
+
+
+            return rtvArray;
+        }
+
+        function getH(startElement, targetElement) {
+
+            var start_x = parseInt(startElement.getAttribute("data-x"));
+            var start_y = parseInt(startElement.getAttribute("data-y"));
+
+            var target_x = parseInt(targetElement.getAttribute("data-x"));
+            var target_y = parseInt(targetElement.getAttribute("data-y"));
+
+            var dx = start_x - target_x;
+            var dy = start_y - target_y;
+
+            var h = Math.sqrt((dx * dx) + (dy * dy));
+            h = h * 10;
+
+            return h;
+        }
+
+        function writeLog(entry) {
+            var d = new Date();
+            document.getElementById("txtDebug").innerHTML += "[" + d.toLocaleTimeString() + "] " + entry + "\n";
+        }
+
+    </script>
+</body>
+</html>
