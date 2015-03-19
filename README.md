@@ -1,0 +1,2 @@
+# pathfindingJS
+JavaScript Pathfinding
