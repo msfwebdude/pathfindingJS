@@ -18,4 +18,4 @@ A debug log will print out below in textarea box
 If you have any comments, suggestions or questions let me know, thanks :)  
 
 
-<img src="https://dl.dropboxusercontent.com/u/4374311/github/pathfinding-github-image.png" border="0" />  
+<img src="http://firoved.com/github/pathfinding-github-image.png" border="0" />  
